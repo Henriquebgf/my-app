@@ -164,7 +164,7 @@ export default {
           .then((response) => {
             console.log(response);
             Object.assign(this.alunos[this.editedIndex], this.editedItem);
-            this.close;
+            this.close();
           })
           .catch((error) => console.log(error));
       } else {
