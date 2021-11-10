@@ -1,0 +1,32 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "turno": "tarde",
+      "nome": "Luis Henrique",
+      "nota": "8",
+      "curso": "Geografia"
+    },
+    {
+      "id": 2,
+      "turno": "tarde",
+      "nome": "Caio",
+      "nota": 5,
+      "curso": "Geografia"
+    },
+    {
+      "id": 3,
+      "turno": "noite",
+      "nome": "Michael",
+      "nota": "6",
+      "curso": "Teatro"
+    },
+    {
+      "id": 4,
+      "turno": "manhã",
+      "nome": "Antonia",
+      "nota": "10",
+      "curso": "Direito"
+    }
+  ]
+}
