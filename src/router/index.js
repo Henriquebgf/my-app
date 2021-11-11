@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/Home'
-import LivroCrud from '../components/LivroCrud'
+import AlunoCrud from '../components/AlunoCrud'
+import CursoCrud from '../components/CursoCrud'
 
 Vue.use(VueRouter)
 
@@ -13,7 +14,11 @@ const routes = [
   },
   {
     path: '/alunos',
-    component: LivroCrud
+    component: AlunoCrud
+  },
+  {
+    path: '/cursos',
+    component: CursoCrud
   }
 ]
 

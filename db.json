@@ -4,7 +4,7 @@
       "id": 1,
       "turno": "tarde",
       "nome": "Luis Henrique",
-      "nota": "8",
+      "nota": "9",
       "curso": "Geografia"
     },
     {
@@ -27,6 +27,29 @@
       "nome": "Antonia",
       "nota": "10",
       "curso": "Direito"
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Teatro",
+      "preco": "800",
+      "bloco": 2,
+      "sala": 201
+    },
+    {
+      "id": 2,
+      "nome": "Direito",
+      "preco": "1800",
+      "bloco": 3,
+      "sala": "303"
+    },
+    {
+      "id": 3,
+      "nome": "Geografia",
+      "preco": "980",
+      "bloco": "2",
+      "sala": 108
     }
   ]
 }

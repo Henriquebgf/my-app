@@ -107,7 +107,7 @@
 <script>
 import axios from "axios";
 export default {
-  name: "LivroCrud",
+  name: "AlunoCrud",
   data(){
     return{
     search: "",
