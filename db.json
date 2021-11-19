@@ -5,28 +5,21 @@
       "turno": "tarde",
       "nome": "Luis Henrique",
       "nota": "9",
-      "curso": "Geografia"
+      "curso": 1
     },
     {
       "id": 2,
       "turno": "tarde",
       "nome": "Caio",
       "nota": "6",
-      "curso": "Geografia"
+      "curso": 2
     },
     {
       "id": 3,
       "turno": "noite",
       "nome": "Michael",
       "nota": "6",
-      "curso": "Teatro"
-    },
-    {
-      "id": 4,
-      "turno": "manhã",
-      "nome": "Antonia",
-      "nota": "10",
-      "curso": "Direito"
+      "curso": 3
     }
   ],
   "cursos": [
@@ -50,6 +43,13 @@
       "preco": "980",
       "bloco": "2",
       "sala": 108
+    },
+    {
+      "id": "4",
+      "nome": "Biologia",
+      "preco": "500",
+      "bloco": "07",
+      "sala": "703"
     }
   ]
 }

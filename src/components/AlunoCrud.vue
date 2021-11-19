@@ -59,11 +59,15 @@
                           ></v-text-field>
                         </v-col>
 
-                        <v-col cols="12" sm="6" md="6">
-                          <v-text-field
-                            v-model="editedItem.curso"
-                            label="Curso:"
-                          ></v-text-field>
+                        <v-col cols="12" sm="6" md="4">
+                        <v-select
+                          v-model="editedItem.curso"
+                          :items="cursos"
+                          label="Curso"
+                          item-text="nome"
+                          item-value="id"
+                          return-value
+                          ></v-select>
                         </v-col>
 
                         <v-col cols="12" sm="6" md="4">
@@ -89,6 +93,11 @@
               </v-dialog>
             </v-toolbar>
           </template>
+          <!-- fim do form -->
+          <template v-slot:[`item.curso`]="{ item }">
+            {{nomeCurso(item.curso)}}
+          </template>
+
         <template v-slot:[`item.actions`]="{ item }">
             <v-icon small class="mr-2" @click="editItem(item)"> mdi-pencil </v-icon>
             <v-icon small @click="deleteItem(item)"> mdi-delete </v-icon>
@@ -121,6 +130,7 @@ export default {
         { text: "Actions", value: "actions", sortable: false },
       ],
     alunos: [],
+    cursos: [],
     editedIndex: -1,
     editedItem: {
         id: 0,
@@ -139,10 +149,23 @@ export default {
   };
 },
   methods: {
+    nomeCurso(id) {
+      var nomeCurso = this.cursos.find((x)=> x.id === id);
+      nomeCurso = nomeCurso ? nomeCurso.nome : "Curso Desconhecido";
+      return nomeCurso;
+    },
+
+
     inicializa() {
       axios("http://localhost:3000/alunos")
         .then((response) => {
           this.alunos = response.data;
+        })
+        .catch((error) => console.log(error));
+
+         axios("http://localhost:3000/cursos")
+        .then((response) => {
+          this.cursos = response.data;
         })
         .catch((error) => console.log(error));
     },
