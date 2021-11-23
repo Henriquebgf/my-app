@@ -48,6 +48,7 @@
                           <v-text-field
                             v-model="editedItem.nota"
                             label="Nota:"
+                            type="number"
                           ></v-text-field>
                         </v-col>
                       </v-row>

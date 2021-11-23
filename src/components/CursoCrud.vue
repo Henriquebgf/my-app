@@ -48,6 +48,9 @@
                           <v-text-field
                             v-model="editedItem.preco"
                             label="Preço:"
+                            type="number"
+                            placeholder="00.00"
+                            
                           ></v-text-field>
                         </v-col>
                       </v-row>
@@ -63,6 +66,7 @@
                           <v-text-field
                             v-model="editedItem.bloco"
                             label="Bloco:"
+                            type="number"
                           ></v-text-field>
                         </v-col>
 
@@ -89,6 +93,9 @@
               </v-dialog>
             </v-toolbar>
           </template>
+           <template v-slot:[`item.preco`]="{ item }">
+           R$ {{item.preco}}
+        </template>
         <template v-slot:[`item.actions`]="{ item }">
             <v-icon small class="mr-2" @click="editItem(item)"> mdi-pencil </v-icon>
             <v-icon small @click="deleteItem(item)"> mdi-delete </v-icon>
